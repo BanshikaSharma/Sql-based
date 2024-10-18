@@ -1,0 +1,59 @@
++-----------------+
+|      User       |
++-----------------+
+| - userId: int   |
+| - name: string  |
+| - email: string |
++-----------------+
+| + createOrder() |
+| + viewOrders()  |
++-----------------+
+         |
+         | 1
+         |
+         | 
++-----------------+
+|      Order      |
++-----------------+
+| - orderId: int  |
+| - status:string |
+| - userId: int   |
++-----------------+
+| + addProduct()  |
+| + makePayment() |
++-----------------+
+         |
+         |*
+         |*
+         | 
++-----------------+
+|    OrderProduct |
++-----------------+
+| - orderId: int  |
+| - productId: int|
++-----------------+
+         
++-----------------+
+|     Product     |
++-----------------+
+| - productId: int|
+| - name: string  |
+| - price: decimal |
+| - stock: int    |
++-----------------+
+| + updateStock() |
++-----------------+
+         |
+         |1
+         |*
+         | 
++-----------------+
+|     Payment     |
++-----------------+
+| - paymentId: int|
+| - orderId: int  |
+| - amount:decimal|
+| - status:string |
++-----------------+
+|+processPayment()|
++-----------------+
