@@ -4,7 +4,7 @@
 | - userId: int   |
 | - name: string  |
 | - email: string |
-+-----------------+
++-----------------+  
 | + createOrder() |
 | + viewOrders()  |
 +-----------------+
@@ -38,7 +38,7 @@
 +-----------------+
 | - productId: int|
 | - name: string  |
-| - price: decimal |
+| - price: decimal|
 | - stock: int    |
 +-----------------+
 | + updateStock() |
