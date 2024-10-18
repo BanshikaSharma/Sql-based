@@ -1,0 +1,25 @@
++-----------------+
+|     Product     |
++-----------------+
+| - product_id    |
+| - name          |
+| - price         |
+| - stock         |
++------------------------+
+| + update_stock(q: int) |
+| + restock(q: int)      |
+| + is_below_threshold   |
+|(threshold: int) : bool |
++------------------------+
+         ^
+         |
+         |  Uses
+         |
++-----------------------+
+|    InventorySystem    |
++---------------------------+
+| - products: List[Product] |
++------------------------------------------------------------------------------------------+
+| + process_orders(orders: List[Tuple[int, int]], restock_threshold: int) : List[Product]  |
+| + restock_items(restock_list: List[Tuple[int, int]])                                     |
++------------------------------------------------------------------------------------------+
