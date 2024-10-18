@@ -4,7 +4,7 @@
 | - userId: int   |
 | - name: string  |
 | - email: string |
-+-----------------+  
++-----------------+                                         
 | + createOrder() |
 | + viewOrders()  |
 +-----------------+
@@ -57,3 +57,21 @@
 +-----------------+
 |+processPayment()|
 +-----------------+
+
+
+
+
+SQL BASED 
+
+
+Users (1) ─── (M) Orders
+                |
+                | (M)
+                |
+          OrderProducts (M) ─── (M) Products
+                |
+                | (1)
+                |
+             Payments
+
+
