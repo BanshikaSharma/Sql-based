@@ -6,30 +6,20 @@ class Product:
         self.stock = stock
 
     def update_stock(self, quantity):
-        """Reduces the stock by the specified quantity."""
+       
         self.stock -= quantity
 
     def restock(self, quantity):
-        """Increases the stock by the specified quantity."""
+       
         self.stock += quantity
 
     def is_below_threshold(self, threshold):
-        """Checks if the stock is below the specified threshold."""
+       
         return self.stock < threshold
 
 
 def process_orders(products, orders, restock_threshold=10):
-    """
-    Processes a list of orders and updates the stock levels of the products.
-    
-    Parameters:
-    - products: List of Product objects.
-    - orders: List of tuples, each containing (product_id, quantity).
-    - restock_threshold: The stock level below which a restock alert is triggered.
-    
-    Returns:
-    - A list of products that need to be restocked.
-    """
+   
     restock_alerts = []
 
     for order in orders:
@@ -54,13 +44,7 @@ def process_orders(products, orders, restock_threshold=10):
 
 
 def restock_items(products, restock_list):
-    """
-    Restocks the specified products with the given quantities.
-    
-    Parameters:
-    - products: List of Product objects.
-    - restock_list: List of tuples, each containing (product_id, quantity).
-    """
+   
     for restock in restock_list:
         product_id, quantity = restock
         product = next((p for p in products if p.product_id == product_id), None)
@@ -75,7 +59,7 @@ def restock_items(products, restock_list):
 
 # Example Usage
 if __name__ == "__main__":
-    # Create some products
+   
     product1 = Product(product_id=101, name="Laptop", price=999.99, stock=15)
     product2 = Product(product_id=102, name="Smartphone", price=499.99, stock=5)
     product3 = Product(product_id=103, name="Tablet", price=299.99, stock=20)
