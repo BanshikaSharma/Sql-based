@@ -43,8 +43,6 @@ Execution:
 Verify
 
 *  Open In Editor
-*  Edit
-*  Copy code
 *  python ecommerce.py
 *  Output:
 
